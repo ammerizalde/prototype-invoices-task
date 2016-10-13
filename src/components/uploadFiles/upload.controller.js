@@ -9,6 +9,7 @@ class UploadController {
       $scope.checked=false;
       $scope.upload($scope.files);
     });
+    invoiceService.isShowList=false;
 
     $scope.upload = function (files) {
       if (files && files.length) {

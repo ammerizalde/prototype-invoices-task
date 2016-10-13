@@ -1,9 +1,13 @@
 <div class="col-md-12" ng-if="vm.service.isShowList">
-  <div class="panel panel-primary">
+  <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Invoices</h3>
     </div>
     <div class="panel-body">
+      <div class="text-right">
+        <button type="button" class="btn btn-primary" ng-click='vm.proccessInvoices(); buttonDisabled=true;' ng-disabled="buttonDisabled">Proccess All</button>
+      </div>
+
       <div ng-repeat="invoice in vm.invoices">
         <div class="row is-flex">
           <div class="col-md-10">
@@ -38,9 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="text-center">
-        <button type="button" class="btn btn-primary" ng-click='vm.proccessInvoices(); buttonDisabled=true;' ng-disabled="buttonDisabled">Proccess All</button>
-      </div>
+
     </div>
   </div>
 </div>
