@@ -87,3 +87,8 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 # License
 
 [MIT](/LICENSE)
+
+
+## Look This for services:
+
+https://www.sitepoint.com/writing-angularjs-apps-using-es6/

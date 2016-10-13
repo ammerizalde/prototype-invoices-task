@@ -9,7 +9,7 @@
       $stateProvider
         .state('lstInvoice', {
           url: '/lstInvoice',
-          template: '<lstInvoice></lstInvoice>'
+          template: '<lst-invoice></lst-invoice>'
         });
     })
     .directive('lstInvoice', lstInvoiceComponent);
