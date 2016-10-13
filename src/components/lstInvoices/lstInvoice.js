@@ -12,6 +12,6 @@
           template: '<lstInvoice></lstInvoice>'
         });
     })
-    .directive('lstInvoice', lstInvoiceComponent);
+    .directive('lstinvoice', lstInvoiceComponent);
 
   export default lstInvoiceModule;
