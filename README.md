@@ -1,6 +1,10 @@
 # angular-webpack
 
-Prototype to upload invoices, check prices, keep track of invoices and simulate a dashboard.
+-Prototype to upload invoices, check prices, keep track of invoices and simulate a dashboard.
+-The prototype simulates the way to upload files. Please note that the prototype doesn't validate or store the file.
+-The prototype displays dummy data. The files of the dummies are located in ./invoice/invoice.json and ./stock/stock.json
+
+
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
 
