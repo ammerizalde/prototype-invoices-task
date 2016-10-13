@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <div class="jumbotron text-center">
+    <h2>Invoices: Suppliers</h2>
+  </div>
+  <div class="col-md-12">
+    <div ngf-drop ngf-select ng-model="files" class="drop-box"
+    ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
+    accept=".json"
+    ngf-pattern="'.json'">Drop file here or click to upload suplier invoice</div>
+  </div>
+  <div class="col-md-12">
+    <div ng-if="checked">
+      </br>
+      Files:
+      <ul>
+        <li ng-repeat="f in files" style="font:smaller">{{f.name}} {{f.$error}} {{f.$errorParam}}</li>
+      </ul>
+      Upload Log:
+      <pre>{{log}}</pre>
+    </div>
+  </div>
+</div>

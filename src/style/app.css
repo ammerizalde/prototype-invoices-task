@@ -1,15 +1,16 @@
 /* styles in src/style directory are applied to the whole page */
-main {
-  padding: 1em;
-  font-family: Arial, Helvetica, sans-serif;
-  /*text-align: center;*/
-  margin-top: 50px;
-  display: block;
-}
-
 footer {
   text-align: center;
   font-size: 0.8em;
+}
+
+.drop-box {
+  background: #F8F8F8;
+  border: 5px dashed #DDD;
+  width: 100%;
+  text-align: center;
+  padding: 50px 10px;
+  margin-left: 10px;
 }
 
 /********* Checkbox and Radios***********************/

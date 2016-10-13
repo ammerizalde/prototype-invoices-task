@@ -9,7 +9,7 @@ let invoiceModule = angular.module('invoice', [uiRouter,'ngTable'])
     $stateProvider
       .state('invoices', {
         url: '/invoices',
-        template: '<invoice></invoice>'
+        template: '<upload></upload><invoice></invoice>'
       });
   })
   .directive('invoice', invoiceComponent);

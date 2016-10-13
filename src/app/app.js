@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '../style/app.css';
 
+
 let appModule = angular.module('myApp', [uiRouter,Common.name,Components.name]).directive('app', appComponent);
 
 export default appModule;
