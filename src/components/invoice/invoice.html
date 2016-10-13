@@ -1,36 +1,44 @@
-<div ng-repeat="invoice in vm.invoices">
-  <div class="row">
-    <div class="col-md-10">
-      <h3>Invoice Number: {{invoice.invoice_number}} - Supplier: {{invoice.supplier_name}}</h3>
-      <table ng-table="invoice.tableParams" class="table" show-filter="true">
-        <tr ng-repeat="product in $data" ng-class="{ 'danger': product.summary.margin < 0, 'success': product.summary.margin > 0}">
-          <td title="'Product Name'" filter="{ product_name: 'text'}" sortable="'product_name'">
-            {{product.product_name}}
-          </td>
-          <td title="'Unit Price'" filter="{ unit_price: 'number'}" sortable="'unit_price'">
-            {{product.unit_price}}
-          </td>
-          <td title="'Units'" filter="{ units: 'number'}" sortable="'units'">
-            {{product.units}}
-          </td>
-          <td title="'Summary'" ng-if="product.summary">
-            <p>
-              <b>Margin: </b>{{product.summary.margin}}
-            </p>
-            <p>
-              <b ng-if="product.summary.message">Message: </b>{{product.summary.message}}
-            </p>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div class="col-md-2 center-block">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" ng-click='invoice.selected=!invoice.selected;'>
-        </label>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Invoices</h3>
+  </div>
+  <div class="panel-body">
+    <div ng-repeat="invoice in vm.invoices">
+      <div class="row is-flex">
+        <div class="col-md-10">
+          <h3>Invoice Number: {{invoice.invoice_number}} - Supplier: {{invoice.supplier_name}}</h3>
+          <table ng-table="invoice.tableParams" class="table table-striped table-hover table-bordered" show-filter="true">
+            <tr ng-repeat="product in $data" ng-class="{ 'danger': product.summary.margin < 0, 'success': product.summary.margin > 0}">
+              <td title="'Product Name'" filter="{ product_name: 'text'}" sortable="'product_name'">
+                {{product.product_name}}
+              </td>
+              <td title="'Unit Price'" filter="{ unit_price: 'number'}" sortable="'unit_price'">
+                {{product.unit_price}}
+              </td>
+              <td title="'Units'" filter="{ units: 'number'}" sortable="'units'">
+                {{product.units}}
+              </td>
+              <td title="'Summary'" ng-if="invoice.proccessed">
+                <p>
+                  <b>Margin: </b>{{product.summary.margin}}
+                </p>
+                <p>
+                  <b ng-if="product.summary.message">Message: </b>{{product.summary.message}}
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-2 funkyradio vcenter">
+            <div class="funkyradio-primary">
+              <input id="{{invoice.invoice_number}}" type="checkbox" ng-click='vm.proccessInvoices(invoice)' ng-disabled="invoice.proccessed" ng-checked="invoice.proccessed"/>
+              <label for="{{invoice.invoice_number}}">Proccess Invoice</label>
+            </div>
+        </div>
       </div>
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary" ng-click='vm.proccessInvoices(); buttonDisabled=true;' ng-disabled="buttonDisabled">Proccess All</button>
     </div>
   </div>
 </div>
-<button type="button" class="btn btn-primary" ng-click='vm.proccessInvoices()'>Proccess</button>
