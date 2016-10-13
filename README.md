@@ -1,8 +1,10 @@
 # angular-webpack
 
--Prototype to upload invoices, check prices, keep track of invoices and simulate a dashboard.
--The prototype simulates the way to upload files. Please note that the prototype doesn't validate or store the file.
--The prototype displays dummy data. The files of the dummies are located in ./invoice/invoice.json and ./stock/stock.json
+* Prototype to upload invoices, check prices, keep track of invoices and simulate a dashboard.
+
+* The prototype simulates the way to upload files. Please note that the prototype doesn't validate or store the file.
+
+* The prototype displays dummy data. The files of the dummies are located in ./invoice/invoice.json and ./stock/stock.json
 
 
 
@@ -12,7 +14,7 @@
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angular-webpack.git my-app
+$ git clone https://github.com/ammerizalde/prototype-invoices-task.git my-app
 
 # change directory to your app
 $ cd my-app
@@ -71,8 +73,3 @@ It will start a local server using `webpack-dev-server` which will watch, build 
 # License
 
 [MIT](/LICENSE)
-
-
-## Look This for services:
-
-https://www.sitepoint.com/writing-angularjs-apps-using-es6/
