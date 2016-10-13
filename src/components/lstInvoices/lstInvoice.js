@@ -9,9 +9,9 @@
       $stateProvider
         .state('lstInvoice', {
           url: '/lstInvoice',
-          template: '<lstInvoice></lstInvoice>'
+          template: '<lst-invoice></lst-invoice>'
         });
     })
-    .directive('lstinvoice', lstInvoiceComponent);
+    .directive('lstInvoice', lstInvoiceComponent);
 
   export default lstInvoiceModule;
