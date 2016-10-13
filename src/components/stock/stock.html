@@ -1,0 +1,27 @@
+<h3>Stock</h3>
+
+  <div class="row">
+    <div class="col-md-10">
+      <table ng-table="stock.tableParams" class="table" show-filter="true">
+        <tr ng-repeat="stock in $data" ng-class="{ 'danger': stock.units < 50}">
+          <td title="'Product Id'" filter="{ product_id: 'number'}" sortable="'product_id'">
+              {{stock.product_id}}
+          </td>
+          <td title="'Product Name'" filter="{ product_name: 'text'}" sortable="'product_name'">
+            {{stock.product_name}}
+          </td>
+          <td title="'Cost Price'" filter="{ cost_price: 'number'}" sortable="'cost_price'">
+            {{stock.cost_price}}
+          </td>
+          <td title="'Sale Price'" filter="{ sale_price: 'number'}" sortable="'sale_price'">
+            {{stock.sale_price}}
+          </td>
+          <td title="'Units'" filter="{ units: 'number'}" sortable="'units'">
+            {{stock.units}}
+          </td>
+
+        </tr>
+      </table>
+    </div>
+
+  </div>

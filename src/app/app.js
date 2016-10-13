@@ -7,6 +7,7 @@ import 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 
+
 let appModule = angular.module('myApp', [uiRouter,Common.name,Components.name]).directive('app', appComponent);
 
 export default appModule;
