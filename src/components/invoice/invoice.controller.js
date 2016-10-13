@@ -1,8 +1,9 @@
 class InvoiceController {
-  constructor(NgTableParams,$filter,$scope) {
+  constructor(invoiceService,NgTableParams,$filter) {
     this.filter=$filter;
     this.invoices = require("json!./invoice.json");
     this.stock = require("json!../stock/stock.json");
+    this.service=invoiceService;
     for (let invoice of this.invoices) {
       invoice.proccessed=false;
       invoice.tableParams=new NgTableParams({}, { dataset: invoice.products});

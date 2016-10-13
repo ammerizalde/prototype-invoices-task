@@ -1,4 +1,8 @@
 /* styles in src/style directory are applied to the whole page */
+.container-fluid {
+  padding-top: 100px;
+}
+
 footer {
   text-align: center;
   font-size: 0.8em;

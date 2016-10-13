@@ -1,14 +1,13 @@
 class UploadController {
-  constructor($scope) {
+  constructor(invoiceService,$scope) {
     //DataDummy
     this.invoices = require("json!../invoice/invoice.json");
     this.log = '';
     this.checked=false;
 
     $scope.$watch('files', function () {
-    $scope.checked=false;
-    $scope.upload($scope.files);
-
+      $scope.checked=false;
+      $scope.upload($scope.files);
     });
 
     $scope.upload = function (files) {
@@ -19,6 +18,7 @@ class UploadController {
               //TODO: call store and valid data
               $scope.checked=true;
               $scope.log='100%';
+              invoiceService.isShowList=true;
             }
           }
       }
@@ -26,13 +26,9 @@ class UploadController {
     $scope.$watch('file', function () {
       if ($scope.file != null) {
           $scope.files = [$scope.file];
-
         }
     });
-
 }
-
-
 }
 
 export default UploadController;
